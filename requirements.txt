@@ -1,6 +1,5 @@
 streamlit
 pandas
-os
 google-generativeai
 IPython
 langchain-google-genai
