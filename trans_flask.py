@@ -36,7 +36,7 @@ def translate_text():
     Expects JSON input with a 'text' field.
     """
     text = request.get_json()
-    data = pd.DataFrame(text)
+    data = pd.DataFrame([text])
     text_to_translate = data["text"].values[0]
     
     if not text_to_translate:
@@ -50,4 +50,7 @@ def translate_text():
     return jsonify({'Translated text': result})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5002)
+
+# Run the Flask app
+
